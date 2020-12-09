@@ -45,7 +45,97 @@ apt-key fingerprint
 # uid                  OpenModelica Build System 
 ```
 
+Then update and install OpenModelica
+```
+sudo apt update
+sudo apt install openmodelica
+```
+
 #### Installing Modelica libraries
+
+In the current release of OpenModelica, you use apt to install libraries:
+
+>for PKG in `apt-cache search "omlib-.*" | cut -d" " -f1`; do sudo apt-get install -y "$PKG"; done # Installs optional Modelica libraries (most have not been tested with OpenModelica)
+
+**Note:** *You may check the OpenModelica Users Guide for details: https://openmodelica.org/doc/OpenModelicaUsersGuide/latest/index.html*
+
+#### Installing Custom Modelica Microgrid library
+
+Download the file `MicroGrid.zip` from the following repo: https://github.com/SmartGridApp/Modelica-Files
+
+Unzip the file in any directory. Open the OpenModelica software GUI by running the command in terminal:
+>OMEdit
+
+Open the `File Menu` from top-left of the tool -> Click `Load Library` 
+
+When a file browsing pop-up opens, go into the unzipped `Microgrid` folder -> Search for `Package.mo` file and open it
+
+### Python
+
+#### Prerequisites
+```
+sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+```
+
+#### Download Python 3.5
+```
+cd /usr/src
+wget https://www.python.org/ftp/python/3.5.9/Python-3.5.9.tgz
+sudo tar xzf Python-3.5.9.tgz
+```
+
+#### Install Python
+```
+cd Python-3.5.9
+sudo ./configure --enable-optimizations
+sudo make altinstall
+```
+
+#### Check the Python Version
+```
+python3.5 -V
+
+#Python 3.5.9
+```
+
+Using the Software Tool `MAGIC`
+-------------------------------------
+
+## Setting up a local HTTP Server with Python
+
+Run the following Commands:
+```
+git clone https://github.com/arnab-m/imprint-mgp.git .
+cd imprint-mgp/MAGIC
+python3 -m http.server 8000
+```
+
+## Running MAGIC
+
+* In any browser hit this url: `http://localhost:8000` -> The Tool opens
+* You can see all the components listed in the left side bar
+
+![Magic_demo_1](/img/magic_demo_1.png)
+
+* In the header panel, six buttons are there:
+	* `ReArrange` => It is used to move and rearrange the components
+	* `Connection` => It connects the components following each click
+	* `Undo` => Any step is undone by clicking it
+	* `Clear Grid` => By clicking this button, we reset the grid by removing all components along with its connections
+	* `Show MO/Design` => Toggle between Modelica code for the model and the UI design of the model
+	* `Options`:
+		* _Save_ => It saves the current model design for future use
+		* _Load_ => It loads any saved model design
+		* _Download XML_ => Generalized XML can be downloaded
+		* _Download MO_ => Downloads Final Modelica code for the model design
+
+![Magic_demo_2](/img/magic_demo_2.png)
+
+#### Load an Existing Model
+
+* Load a pre-saved model by clicking the above-mentioned “Load” button
+>The model loads and you can see the design on the Grid. By clicking the “Show MO” button, you can see the code for it. You may move/delete/add any component and connection as you wish. Accordingly, the code will change. After you are done with your modification, download the modelica code by clicking the “Download MO” button.
 
 Contributors
 -------------------

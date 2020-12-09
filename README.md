@@ -32,7 +32,9 @@ Getting Started
 ### OpenModelica: Debian / Ubuntu Packages
 
 Run the following command in the terminal:
->for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release -cs` stable"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
+```
+for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release -cs` stable"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
+```
 
 Import the GPG key used to sign the releases:
 ```
@@ -134,8 +136,50 @@ python3 -m http.server 8000
 
 #### Load an Existing Model
 
-* Load a pre-saved model by clicking the above-mentioned “Load” button
->The model loads and you can see the design on the Grid. By clicking the “Show MO” button, you can see the code for it. You may move/delete/add any component and connection as you wish. Accordingly, the code will change. After you are done with your modification, download the modelica code by clicking the “Download MO” button.
+* Load a pre-saved model by clicking the above-mentioned `Load` button.
+>The model loads and you can see the design on the Grid. By clicking the “Show MO” button, you can see the code for it. You may move/delete/add any component and connection as you wish. Accordingly, the code will change. After you are done with your modification, download the modelica code by clicking the `Download MO` button.
+
+![Magic_demo_3](/img/magic_demo_3.png)
+
+#### Build a Model from Scratch
+
+* Reset the Grid by clicking the `Clear Grid` button.
+* Click on a component => It is selected.
+* Move the cursor and click on any point of the Grid => The component will be placed there.
+* Click the properties button on it => Properties modal box opens.
+	* You may change the component name as per your convenience.
+	* Click the `+` button to add the component attributes.
+	* Choose the attribute from the dropdown => Corresponding default value will be assigned. If you wish, you may change the value.
+	* After defining all the attributes of the component, click the `save` button.
+* Again if you wish to change the properties of the component:
+	* Open the properties modal box.
+	* Delete any attribute row by clicking the `binBox` button in the left and again add it following the above mentioned procedures.
+
+![Magic_demo_4](/img/magic_demo_4.png)
+
+![Magic_demo_5](/img/magic_demo_5.png)
+
+* Corresponding codes are updated following your changes. You can check it by clicking the `Show MO` button.
+* You can go back to the design mode by clicking the `Show Design` button.
+
+![Magic_demo_6](/img/magic_demo_6.png)
+
+* You may delete the component by clicking the `cross` button on the component.
+* On adding all your required components, if you want to change the location of any component:
+	* Click the `ReArrange` button => Checkbox appears on each component.
+	* Click the checkbox of the component you want to move => Then click on any preferred location of your choice in the Grid => The component will be re-arranged.
+* Finally connecting the components:
+	* Click on the `Connection` button => Checkbox appears on each component.
+	* Choose the source component checkbox and next, click the destination component checkbox => Arrow lines appear following your choice of source and destination.
+	* Corresponding connection modelica codes change accordingly.
+
+![Magic_demo_7](/img/magic_demo_7.png)
+
+![Magic_demo_8](/img/magic_demo_8.png)
+
+* Once you finalize the design, download the modelica file for the model by clicking the `Download MO` button.
+* Look for the path `MicroGrid/Examples/OnePhase` in the custom MicroGrid modelica library and keep this downloaded modelica file inside it.
+* Run the model in OpenModelica environment and you will get the corresponding simulation results.
 
 Contributors
 -------------------

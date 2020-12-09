@@ -1,0 +1,450 @@
+{
+    "grid": [
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null,
+        {
+            "coordinate":
+            {
+                "row": 1,
+                "col": 1
+            },
+            "name": "Sensor1",
+            "id": 1,
+            "type": "Sensor",
+            "properties": [],
+            "link": null,
+            "namespace": "MicroGrid.OnePhase.Components.Sensor.Sensor",
+            "componentRefID": 0,
+            "connections": [
+            {
+                "id": 1,
+                "targetId": 2,
+                "ConnectionCells": [
+                {
+                    "row": 1,
+                    "col": 2,
+                    "dir": "RIGHT"
+                },
+                {
+                    "row": 1,
+                    "col": 3,
+                    "dir": "RIGHT"
+                }]
+            }],
+            "componentConnectedpairs": [
+            {
+                "id": 1,
+                "targetComponentId": 2,
+                "coordinate":
+                {
+                    "row": 1,
+                    "col": 4
+                },
+                "flow": "outward"
+            }],
+            "terminalValue": []
+        },
+        {
+            "rightCount": 1,
+            "rightDir": "RIGHT",
+            "connectedCell": true,
+            "direction": "RIGHT"
+        },
+        {
+            "rightCount": 1,
+            "rightDir": "RIGHT",
+            "connectedCell": true,
+            "direction": "RIGHT"
+        },
+        {
+            "coordinate":
+            {
+                "row": 1,
+                "col": 4
+            },
+            "name": "My Custom Name",
+            "id": 2,
+            "type": "FeederTie",
+            "properties": [],
+            "link": null,
+            "namespace": "MicroGrid.OnePhase.Components.Switch.FeederTie",
+            "componentRefID": 3,
+            "connections": [
+            {
+                "id": 1,
+                "targetId": 1,
+                "ConnectionCells": [
+                {
+                    "row": 1,
+                    "col": 2,
+                    "dir": "RIGHT"
+                },
+                {
+                    "row": 1,
+                    "col": 3,
+                    "dir": "RIGHT"
+                }]
+            }],
+            "componentConnectedpairs": [
+            {
+                "id": 1,
+                "targetComponentId": 1,
+                "coordinate":
+                {
+                    "row": 1,
+                    "col": 1
+                },
+                "flow": "inward"
+            }],
+            "terminalValue": [
+            {
+                "name": "Sensor1",
+                "id": 1,
+                "$$hashKey": "object:2305"
+            }],
+            "connectioRow": [
+            {
+                "id": 3,
+                "$$hashKey": "object:2303",
+                "srcLink": "v_out_left",
+                "destName":
+                {
+                    "name": "Sensor1",
+                    "id": 1,
+                    "$$hashKey": "object:2305"
+                },
+                "destLink": "v_in_left"
+            }],
+            "connectionSave": false
+        }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null,
+        {
+            "coordinate":
+            {
+                "row": 3,
+                "col": 2
+            },
+            "name": "Constant3",
+            "id": 3,
+            "type": "Constant",
+            "properties": [
+            {
+                "name": "K",
+                "value": "1"
+            },
+            {
+                "name": "K",
+                "value": "2"
+            },
+            {
+                "name": "K",
+                "value": "3"
+            }],
+            "link": null,
+            "namespace": "Modelica.Blocks.Sources.Constant",
+            "componentRefID": 2,
+            "terminalValue": [],
+            "propertyList": [
+            {
+                "id": 2,
+                "$$hashKey": "object:2318",
+                "selectedProp":
+                {
+                    "name": "K",
+                    "value": "",
+                    "$$hashKey": "object:2313"
+                },
+                "value": "1"
+            },
+            {
+                "id": 2,
+                "$$hashKey": "object:2315",
+                "selectedProp":
+                {
+                    "name": "K",
+                    "value": "",
+                    "$$hashKey": "object:2313"
+                },
+                "value": "2"
+            },
+            {
+                "id": 2,
+                "$$hashKey": "object:2311",
+                "selectedProp":
+                {
+                    "name": "K",
+                    "value": "",
+                    "$$hashKey": "object:2313"
+                },
+                "value": "3"
+            }],
+            "attributeSave": false,
+            "connectioRow": [],
+            "connectionSave": false,
+            "saved": true
+        }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    ],
+    "context":
+    {
+        "undo": [
+        {
+            "type": "COMPONENT",
+            "coordinate":
+            {
+                "row": 1,
+                "col": 1
+            }
+        },
+        {
+            "type": "COMPONENT",
+            "coordinate":
+            {
+                "row": 1,
+                "col": 4
+            }
+        },
+        {
+            "type": "CONNECTOR",
+            "coordinate": [
+            {
+                "row": 1,
+                "col": 2,
+                "dir": "RIGHT"
+            },
+            {
+                "row": 1,
+                "col": 3,
+                "dir": "RIGHT"
+            }]
+        },
+        {
+            "type": "COMPONENT",
+            "coordinate":
+            {
+                "row": 3,
+                "col": 2
+            }
+        }],
+        "designSchema":
+        {
+            "component": [
+            {
+                "coordinate":
+                {
+                    "row": 1,
+                    "col": 1
+                },
+                "name": "Sensor1",
+                "id": 1,
+                "type": "Sensor",
+                "properties": [],
+                "link": null,
+                "namespace": "MicroGrid.OnePhase.Components.Sensor.Sensor",
+                "componentRefID": 0,
+                "connections": [
+                {
+                    "id": 1,
+                    "targetId": 2,
+                    "ConnectionCells": [
+                    {
+                        "row": 1,
+                        "col": 2,
+                        "dir": "RIGHT"
+                    },
+                    {
+                        "row": 1,
+                        "col": 3,
+                        "dir": "RIGHT"
+                    }]
+                }],
+                "componentConnectedpairs": [
+                {
+                    "id": 1,
+                    "targetComponentId": 2,
+                    "coordinate":
+                    {
+                        "row": 1,
+                        "col": 4
+                    },
+                    "flow": "outward"
+                }],
+                "terminalValue": []
+            },
+            {
+                "coordinate":
+                {
+                    "row": 1,
+                    "col": 4
+                },
+                "name": "My Custom Name",
+                "id": 2,
+                "type": "FeederTie",
+                "properties": [],
+                "link": null,
+                "namespace": "MicroGrid.OnePhase.Components.Switch.FeederTie",
+                "componentRefID": 3,
+                "connections": [
+                {
+                    "id": 1,
+                    "targetId": 1,
+                    "ConnectionCells": [
+                    {
+                        "row": 1,
+                        "col": 2,
+                        "dir": "RIGHT"
+                    },
+                    {
+                        "row": 1,
+                        "col": 3,
+                        "dir": "RIGHT"
+                    }]
+                }],
+                "componentConnectedpairs": [
+                {
+                    "id": 1,
+                    "targetComponentId": 1,
+                    "coordinate":
+                    {
+                        "row": 1,
+                        "col": 1
+                    },
+                    "flow": "inward"
+                }],
+                "terminalValue": [
+                {
+                    "name": "Sensor1",
+                    "id": 1,
+                    "$$hashKey": "object:2305"
+                }],
+                "connectioRow": [
+                {
+                    "id": 3,
+                    "$$hashKey": "object:2303",
+                    "srcLink": "v_out_left",
+                    "destName":
+                    {
+                        "name": "Sensor1",
+                        "id": 1,
+                        "$$hashKey": "object:2305"
+                    },
+                    "destLink": "v_in_left"
+                }],
+                "connectionSave": false
+            },
+            {
+                "coordinate":
+                {
+                    "row": 3,
+                    "col": 2
+                },
+                "name": "Constant3",
+                "id": 3,
+                "type": "Constant",
+                "properties": [
+                {
+                    "name": "K",
+                    "value": "1"
+                },
+                {
+                    "name": "K",
+                    "value": "2"
+                },
+                {
+                    "name": "K",
+                    "value": "3"
+                }],
+                "link": null,
+                "namespace": "Modelica.Blocks.Sources.Constant",
+                "componentRefID": 2,
+                "terminalValue": [],
+                "propertyList": [
+                {
+                    "id": 2,
+                    "$$hashKey": "object:2318",
+                    "selectedProp":
+                    {
+                        "name": "K",
+                        "value": "",
+                        "$$hashKey": "object:2313"
+                    },
+                    "value": "1"
+                },
+                {
+                    "id": 2,
+                    "$$hashKey": "object:2315",
+                    "selectedProp":
+                    {
+                        "name": "K",
+                        "value": "",
+                        "$$hashKey": "object:2313"
+                    },
+                    "value": "2"
+                },
+                {
+                    "id": 2,
+                    "$$hashKey": "object:2311",
+                    "selectedProp":
+                    {
+                        "name": "K",
+                        "value": "",
+                        "$$hashKey": "object:2313"
+                    },
+                    "value": "3"
+                }],
+                "attributeSave": false,
+                "connectioRow": [],
+                "connectionSave": false,
+                "saved": true
+            }],
+            "connection": [
+            {
+                "id": 1,
+                "srcid": 1,
+                "destid": 2,
+                "ConnectionCells": [
+                {
+                    "row": 1,
+                    "col": 2,
+                    "dir": "RIGHT"
+                },
+                {
+                    "row": 1,
+                    "col": 3,
+                    "dir": "RIGHT"
+                }]
+            }]
+        }
+    },
+    "circuit": [
+    {
+        "srcName": "My Custom Name",
+        "srcLink": "v_out_left",
+        "destName": "Sensor1",
+        "destLink": "v_in_left",
+        "srcid": 2,
+        "destid": 1,
+        "$$hashKey": "object:2306"
+    }]
+}

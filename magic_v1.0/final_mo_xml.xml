@@ -1,0 +1,221 @@
+<Architecture name="NewModel">
+<Within name="MicroGrid.Examples.OnePhase"/>
+<Definitions>
+	<Extends name="Modelica.Icons.Example">
+		<Parameter>
+			<Output>
+				<Library name="MicroGrid">
+					<ElementType name="Interfaces">
+						<SubType name="OnePhase">
+							<Type category="Busbar" name="busBar2">
+								<n>2</n>
+							</Type>
+						</SubType>
+					</ElementType>
+					<ElementType name="OnePhase">
+						<SubType name="Components">
+							<Element name="Load">
+								<Type category="Resistive" name="load1">
+								</Type>
+								<Type category="Resistive" name="load2">
+								</Type>
+								<Type category="Resistive" name="load3">
+								</Type>	
+							</Element>	
+							<Element name="Transformers">
+								<Type category="TransformerBasic" name="transformerBasic1"> 
+									<TurnsRatio>14.67</TurnsRatio>
+								</Type>
+								<Type category="TransformerBasic" name="transformerBasic2"> 
+									<TurnsRatio>14.67</TurnsRatio>
+								</Type>
+								<Type category="TransformerBasic" name="transformerBasic3"> 
+									<TurnsRatio>14.67</TurnsRatio>
+								</Type>
+							</Element>
+						</SubType>
+						<SubType name="Sources">
+							<Type category="PV_GridTie" name="pV_GridTie1">
+								<Np>100</Np>
+								<moduleData>moduleData</moduleData>
+								<useConstantIrradiance>false</useConstantIrradiance>
+							</Type>
+							<Type category="PV_GridTie" name="pV_GridTie2">
+								<Np>100</Np>
+								<moduleData>moduleData</moduleData>
+								<useConstantIrradiance>false</useConstantIrradiance>
+							</Type><Type category="PV_GridTie" name="pV_GridTie3">
+								<Np>100</Np>
+								<moduleData>moduleData</moduleData>
+								<useConstantIrradiance>false</useConstantIrradiance>
+							</Type>
+						</SubType>
+					</ElementType>
+				</Library>
+				<Library name="Modelica">
+					<ElementType name="Blocks">
+						<SubType name="Sources">
+							<Type category="Constant" name="irradiance1">
+								<k>900</k>
+							</Type>
+							<Type category="Constant" name="irradiance2">
+								<k>800</k>
+							</Type>
+							<Type category="Constant" name="irradiance3">
+								<k>1000</k>
+							</Type>
+						</SubType>
+					</ElementType>
+				</Library>
+                <Library name="Microgrid">
+                    <ElementType name="Examples">
+                        <SubType name="OnePhase">
+                            <Type category="Building_load" name="building_load1">
+                            </Type>
+                            <Type category="Building_load" name="building_load2">
+                            </Type>
+                            <Type category="Building_load" name="building_load3">
+                            </Type>
+                            <Type category="Building_load" name="building_load4">
+                            </Type>
+                            <Type category="Building_load" name="building_load5">
+                            </Type>
+                            <Type category="Building_load" name="building_load6">
+                            </Type>
+                        </SubType>
+                    </ElementType>
+                </Library>
+			</Output>
+		</Parameter>
+		<Parameter>
+			<Params category="MicroGrid.DC.PhotoVoltaics.Records.ModuleData" name="moduleData">
+				<ImpRef>7.61</ImpRef>
+				<IscRef>8.21</IscRef>
+				<VmpRef>26.3</VmpRef>
+				<VocRef>32.9</VocRef>
+				<alphaIsc>3.18e-3</alphaIsc>
+				<alphaVoc>-0.123</alphaVoc>
+				<ns>54</ns>
+			</Params>
+			<Output>
+				<Library name="MicroGrid">
+					<ElementType name="Interfaces">
+						<SubType name="OnePhase">
+							<Type category="Busbar" name="busBar1">
+								<n>1</n>
+							</Type>
+							<Type category="Busbar" name="busBar3">
+								<n>3</n>
+							</Type>
+						</SubType>
+					</ElementType>
+					<ElementType name="OnePhase">
+						<SubType name="Components">
+							<Element name="Load">
+								<Type category="Resistive" name="load4">
+								</Type>
+								<Type category="Resistive" name="load5">
+								</Type>
+								<Type category="Resistive" name="load6">
+								</Type>	
+							</Element>	
+							<Element name="Transformers">
+								<Type category="TransformerBasic" name="transformerBasic5"> 
+								</Type>
+							</Element>
+							<Element name="Breaker">
+								<Type category="CircuitBreaker" name="circuitBreaker1">
+									<Cut>20</Cut>
+								</Type>
+								<Type category="CircuitBreaker" name="circuitBreaker2">
+									<Cut>20</Cut>
+								</Type>
+							</Element>
+						</SubType>
+						<SubType name="Sources">
+							<Type category="PowerSource" name="MainGrid">
+								<V>440</V>
+							</Type>
+							<Type category="WindPowerPlant" name="windPowerPlant1">
+								<n>48</n>
+							</Type>
+							<Type category="WindPowerPlant" name="windPowerPlant2">
+								<n>60</n>
+							</Type>
+						</SubType>
+					</ElementType>
+				</Library>
+				<Library name="Modelica">
+					<ElementType name="Blocks">
+						<SubType name="Sources">
+							<Type category="Constant" name="GridCapacity">
+								<k>77000</k>
+							</Type>
+							<Type category="Constant" name="WindVelocity1">
+								<k>25</k>
+							</Type>
+							<Type category="Constant" name="WindVelocity2">
+								<k>35</k>
+							</Type>
+						</SubType>
+					</ElementType>
+				</Library>
+			</Output>
+		</Parameter>
+	</Extends>
+</Definitions>
+
+<Equation>
+	<connect T1n="busBar2" T1t="pin_P" T2n="load3" T2t="terminal"/>
+	<connect T1n="building_load6" T1t="y" T2n="load5" T2t="Y"/>
+	<connect T1n="busBar3" T1t="pin_P" T2n="load5" T2t="terminal"/>
+	<connect T1n="busBar3" T1t="V_out" T2n="load5" T2t="V_in"/>
+	<connect T1n="building_load5" T1t="y" T2n="load6" T2t="Y"/>
+	<connect T1n="building_load4" T1t="y" T2n="load4" T2t="Y"/>
+	<connect T1n="building_load3" T1t="y" T2n="load3" T2t="Y"/>
+	<connect T1n="building_load1" T1t="y" T2n="load2" T2t="Y"/>
+	<connect T1n="building_load2" T1t="y" T2n="load1" T2t="Y"/>
+	<connect T1n="irradiance1" T1t="y" T2n="pV_GridTie1" T2t="Irradiance_input"/>
+	<connect T1n="irradiance2" T1t="y" T2n="pV_GridTie2" T2t="Irradiance_input"/>
+	<connect T1n="load1" T1t="terminal" T2n="busBar2" T2t="pin_P"/>
+	<connect T1n="busBar2" T1t="V_out" T2n="load1" T2t="V_in"/>
+	<connect T1n="busBar1" T1t="V_out" T2n="busBar2" T2t="V_in[4]"/>
+	<connect T1n="circuitBreaker1" T1t="N" T2n="busBar2" T2t="pin_N[4]"/>
+	<connect T1n="transformerBasic3" T1t="V_out" T2n="busBar2" T2t="V_in[3]"/>
+	<connect T1n="transformerBasic3" T1t="terminal_out" T2n="busBar2" T2t="pin_N[3]"/>
+	<connect T1n="transformerBasic2" T1t="V_out" T2n="busBar2" T2t="V_in[2]"/>
+	<connect T1n="transformerBasic2" T1t="terminal_out" T2n="busBar2" T2t="pin_N[2]"/>
+	<connect T1n="transformerBasic1" T1t="V_out" T2n="busBar2" T2t="V_in[1]"/>
+	<connect T1n="transformerBasic1" T1t="terminal_out" T2n="busBar2" T2t="pin_N[1]"/>
+	<connect T1n="busBar2" T1t="pin_P" T2n="load2" T2t="terminal"/>
+	<connect T1n="busBar2" T1t="V_out" T2n="load2" T2t="V_in"/>
+	<connect T1n="busBar2" T1t="V_out" T2n="load3" T2t="V_in"/>
+	<connect T1n="busBar2" T1t="pin_P" T2n="circuitBreaker2" T2t="P"/>
+	<connect T1n="busBar2" T1t="V_out" T2n="busBar3" T2t="V_in[1]"/>
+	<connect T1n="irradiance3" T1t="y" T2n="pV_GridTie3" T2t="Irradiance_input"/>
+	<connect T1n="pV_GridTie1" T1t="pin_out" T2n="transformerBasic1" T2t="terminal_in"/>
+	<connect T1n="pV_GridTie1" T1t="V_out" T2n="transformerBasic1" T2t="V_in"/>
+	<connect T1n="pV_GridTie2" T1t="pin_out" T2n="transformerBasic2" T2t="terminal_in"/>
+	<connect T1n="pV_GridTie2" T1t="V_out" T2n="transformerBasic2" T2t="V_in"/>
+	<connect T1n="pV_GridTie3" T1t="pin_out" T2n="transformerBasic3" T2t="terminal_in"/>
+	<connect T1n="pV_GridTie3" T1t="V_out" T2n="transformerBasic3" T2t="V_in"/>
+	<connect T1n="busBar1" T1t="V_out" T2n="load4" T2t="V_in"/>
+	<connect T1n="busBar1" T1t="pin_P" T2n="load4" T2t="terminal"/>
+	<connect T1n="busBar1" T1t="pin_P" T2n="circuitBreaker1" T2t="P"/>
+	<connect T1n="transformerBasic5" T1t="V_out" T2n="busBar1" T2t="V_in[1]"/>
+	<connect T1n="transformerBasic5" T1t="terminal_out" T2n="busBar1" T2t="pin_N[1]"/>
+	<connect T1n="GridCapacity" T1t="y" T2n="MainGrid" T2t="P_in"/>
+	<connect T1n="MainGrid" T1t="v_out" T2n="transformerBasic5" T2t="V_in"/>
+	<connect T1n="MainGrid" T1t="terminal" T2n="transformerBasic5" T2t="terminal_in"/>
+	<connect T1n="circuitBreaker2" T1t="N" T2n="busBar3" T2t="pin_N[1]"/>
+	<connect T1n="busBar3" T1t="V_out" T2n="load6" T2t="V_in"/>
+	<connect T1n="busBar3" T1t="pin_P" T2n="load6" T2t="terminal"/>
+	<connect T1n="windPowerPlant1" T1t="V_out" T2n="busBar3" T2t="V_in[2]"/>
+	<connect T1n="windPowerPlant1" T1t="pin_P1" T2n="busBar3" T2t="pin_N[2]"/>
+	<connect T1n="windPowerPlant2" T1t="V_out" T2n="busBar3" T2t="V_in[3]"/>
+	<connect T1n="windPowerPlant2" T1t="pin_P1" T2n="busBar3" T2t="pin_N[3]"/>
+	<connect T1n="WindVelocity1" T1t="y" T2n="windPowerPlant1" T2t="WindVelocity"/>
+	<connect T1n="WindVelocity2" T1t="y" T2n="windPowerPlant2" T2t="WindVelocity"/>
+</Equation>
+
+</Architecture>

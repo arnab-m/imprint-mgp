@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<microgrid version="0.1">
+	<model id="MicroGrid_Layout_1_phase">
+		<component id="1" name="sensor1" type="Sensor" />
+		<component id="2" name="sensor2" type="Sensor" />
+		<component id="3" name="resistive11" type="Resistive">
+		</component>
+		<component id="4" name="resistive12" type="Resistive">
+		</component>
+		<component id="5" name="const" type="Constant">
+			<k>2</k>
+		</component>
+		<component id="6" name="const1" type="Constant">
+			<k>2</k>
+		</component>
+		<component id="7" name="feederTie1" type="FeederTie" />
+		<component id="8" name="powerSource2" type="PowerSource">
+			<P_Capacity>2</P_Capacity>
+			<P_in>2</P_in>
+		</component>
+		<component id="9" name="newFeeder1" type="NewFeeder">
+		</component>
+		<component id="10" name="newFeeder2" type="NewFeeder" />
+		<component id="11" name="boolean_pulse1" type="BooleanPulse">
+			<width>1</width>
+		</component>
+		<component id="12" name="boolean_pulse2" type="BooleanPulse">
+			<width>6</width>
+		</component>
+		<component id="13" name="powerSource2" type="PowerSource">
+			<P_Capacity>5</P_Capacity>
+			<P_in>4</P_in>
+		</component>
+		<equation>
+			<connection destid="1" destlink="P" id="1" 
+			srcid="13" srclink="terminal" />
+			<connection destid="8" destlink="terminal" id="2"
+				srcid="2" srclink="N" />
+			<connection destid="8" destlink="v_out" id="3" srcid="10"
+				srclink="V_in_right" />
+			<connection destid="9" destlink="V_in_left" id="4"
+				srcid="13" srclink="v_out" />
+		
+																								<connection destid="9" destlink="control_R" id="5"
+																									srcid="12" srclink="y" />
+																								
+																								<connection destid="9" destlink="control_L" id="6"
+																									srcid="12" srclink="y" />
+				
+				
+			<connection destid="10" destlink="control_R" id="7"
+				srcid="11" srclink="y" />
+			<connection destid="10" destlink="control_R" id="8"
+				srcid="11" srclink="y" />
+				
+				
+			<connection destid="3" destlink="V_in" id="9" srcid="9"
+				srclink="V_out" />
+			<connection destid="4" destlink="V_in" id="10" srcid="10"
+				srclink="V_out" />
+			<connection destid="4" destlink="terminal" id="11"
+				srcid="10" srclink="feeder" />
+			<connection destid="3" destlink="terminal" id="12"
+				srcid="9" srclink="feeder" />
+			<connection destid="7" destlink="V_in_right" id="13"
+				srcid="10" srclink="V_out" />
+			<connection destid="7" destlink="V_in_left" id="14"
+				srcid="9" srclink="V_out" />
+			<connection destid="2" destlink="P" id="15" srcid="10"
+				srclink="N" />
+			<connection destid="7" destlink="V_out_left" id="16"
+				srcid="9" srclink="V_in_right" />
+			<connection destid="10" destlink="V_in_left" id="17"
+				srcid="7" srclink="V_out_right" />
+			<connection destid="10" destlink="P" id="18" srcid="7"
+				srclink="N" />
+			<connection destid="7" destlink="P" id="19" srcid="9"
+				srclink="N" />
+			<connection destid="10" destlink="P" id="20" srcid="7"
+				srclink="N" />
+			<connection destid="9" destlink="P" id="21" srcid="1"
+				srclink="N" />
+			<connection destid="7" destlink="Left" id="22" srcid="1"
+				srclink="I" />
+			<connection destid="7" destlink="Right" id="23" srcid="2"
+				srclink="I" />
+			<connection destid="4" destlink="Y" id="24" srcid="6"
+				srclink="y" />
+			<connection destid="3" destlink="Y" id="25" srcid="5"
+				srclink="y" />
+		</equation>
+	</model>
+</microgrid>

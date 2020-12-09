@@ -1,0 +1,40 @@
+ <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th><span ng-click="addRow()" class="fa fa-plus-square" data-toggle="tooltip" title="Add Property">  </span></th>
+                                            <th>Attribute</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="success" ng-repeat="prop in gridMatrix[propRow][propCol].propertyList">
+                                            <td class="col-sm-1 col-md-1 col-lg-1 text-center">
+												<button type="button" class="btn btn-default btn-xs" ng-click="deleteRow($index)" data-toggle="tooltip" title="Delete Property">
+													<span class="glyphicon glyphicon-trash"></span>
+												</button>
+											</td>
+	                                        <td class="col-sm-2 col-md-2 col-lg-2 text-center">
+												<div class="input-group">
+													<div ng-show="prop.saveStatus==true">
+														<p type="text" ng-disabled="true" ng-readonly="true" readonly="readonly=">{{prop.selectedProp.name}}</p>
+													</div>
+													<div ng-show="prop.saveStatus==false">
+														<select name="category" class="form-control" ng-model="prop.selectedProp" ng-options="list.name for list in componentList[prop.id].properties" document-type-required>
+														</select>
+													</div>
+												</div>
+											</td>
+											<td class="col-sm-6 col-md-6 col-lg-6">
+													<div ng-show="prop.saveStatus==true">
+														<p type="text" class="pull-left" ng-disabled="true" ng-readonly="true" readonly="readonly=">{{prop.value}}</p>
+													</div>
+													<div ng-show="prop.saveStatus==false">
+														<div ng-repeat="list in componentList[prop.id].properties">
+															<input ng-if="prop.selectedProp.name==list.name" class="form-control" type="text" ng-model="prop.value" ng-init="prop.value = list.value" placeholder="Provide Value . . ." maxlength="200" ng-maxlength="50">
+														</div>
+													</div>
+												
+											</td>
+                                        </tr>
+                                    </tbody>
+                                </table>

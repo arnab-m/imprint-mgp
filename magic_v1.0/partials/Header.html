@@ -1,0 +1,68 @@
+<div class="navbar-header">
+  <a class="navbar-brand"> MAGIC - Microgrid Design Tool </a>
+</div>
+
+<ul class="nav navbar-top-links navbar-right">
+<li>
+<!-- <a>
+<button class=" btn btn-primary" ng-click="draw()"><i class="fa fa-pencil"></i> Line </button>
+</a> -->
+</li>
+<li>
+<a>
+<button class=" btn btn-primary" ng-click="reArrange()"><i class="fa fa-exchange"></i> ReArrange </button>
+</a>
+</li> 
+<li>
+<a>
+<button class=" btn btn-primary" ng-click="connectComponent()"><i class="fa fa-link"></i> Connection </button>
+</a>
+</li>
+  <li>
+  <a>
+     <button class=" btn btn-primary" ng-click="undoActivity()"><i class="fa fa-undo"></i>  Undo </button>
+  </a>
+  </li>
+  <li>
+<!-- <input ng-modal="sureToClear" style="padding:5px;" type="checkbox"> -->
+</li>
+<li>
+  <a>
+     <button class=" btn btn-primary" ng-click="clear()"> <i class="glyphicon glyphicon-refresh"></i> Clear Grid </button>
+  </a>
+  </li>
+  <li>
+  <a>
+     <button class=" btn btn-primary" ng-click="showDesignXML()"> <i class="fa fa-sitemap "></i> Show <span ng-bind="tiggleDesignButton"></span> </button>
+  </a>
+  </li>
+  <li>
+  </li>
+ <li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+             <i class="fa fa-user fa-fw"></i> Options<i class="fa fa-caret-down"></i>
+         </a>
+         <ul class="dropdown-menu dropdown-user">
+             <li>
+             <a href="#"  ng-click="downloadProject()"><i class="fa fa-save"></i> Save</a>
+             </li>
+             <li>
+             <a href="#" ng-click="load()"><i class="fa fa-upload"></i> Load</a>
+             </li>
+             <li>
+             <a href="#" ng-click="downloadXML()"><i class="fa fa-download"></i> Download XML</a>
+             </li>
+             <li>
+             <a href="#" ng-click="downloadMO()"><i class="fa fa-download"></i> Download MO</a>
+             </li>
+             <li>
+            <!--  <div style="text-align:center">
+               <button focus-index="1" class="btn btn btn-success btn-xs"  
+               data-toggle="modal" focus-element="autofocus" data-target=".app-settings"><i class="fa fa-gear"></i> Settings</button>
+               </div> -->
+             </li>
+         </ul>
+     </li>
+ </ul>
+ 
+ 

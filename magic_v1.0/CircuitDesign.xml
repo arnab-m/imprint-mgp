@@ -1,0 +1,23 @@
+"<?xml version='1.0'?><Architecture name='MicroGrid_Layout_1_phase'><Definitions>
+<Library name='Microgrid'>
+<ElementType name='OnePhase'>
+<SubType name='Components'>
+<Element name='Sensor'>
+<Type category='Sensor' name='Sensor1'></Type>
+</Element></SubType></ElementType></Library>
+
+<Library name='Microgrid'>
+<ElementType name='OnePhase'>
+<SubType name='Components'>
+<Element name='Load'>
+<Type category='Resistive' name='Resistive2'></Type>
+</Element></SubType></ElementType></Library>
+
+<Library name='Microgrid'>
+<ElementType name='OnePhase'>
+<SubType name='Components'>
+<Element name='Sensor'>
+<Type category='Sensor' name='Sensor'></Type>
+</Element></SubType></ElementType></Library>
+
+</Definitions></Architecture>"

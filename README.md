@@ -41,8 +41,8 @@ Please email us bug reports!! The project is under constant improvement!
 * Rumia Masburah [rumiamasburah@iitkgp.ac.in]
 * Jai Mathur [jai.mathur11@gmail.com]
 * Soumyajit Dey [soumya@cse.iitkgp.ac.in]
-* Arnab Sarkar [arnabsarkar@iitg.ac.in]
-* Arijit Mondal [arijit@iitp.ac.in]
+<!-- * Arnab Sarkar [arnabsarkar@iitg.ac.in]
+* Arijit Mondal [arijit@iitp.ac.in] -->
 
 Funding and Acknowledgements
 -----------------------------------

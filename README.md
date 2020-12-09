@@ -23,6 +23,16 @@ Getting Started
 
 ### System / Software Dependencies
 
+* Platform: _32/64 bit Ubuntu Distribution_
+* External Tools: _OpenModelica_
+* Other Requirements: _Python (Version: 3.5 or higher)_
+
+### Installation Instructions
+
+#### OpenModelica: Debian / Ubuntu Packages
+
+###### Installing Modelica libraries
+
 Contributors
 -------------------
 Please email us bug reports!! The project is under constant improvement!

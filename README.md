@@ -179,6 +179,9 @@ python3 -m http.server 8000
 
 * Once you finalize the design, download the modelica file for the model by clicking the `Download MO` button.
 * Look for the path `MicroGrid/Examples/OnePhase` in the custom MicroGrid modelica library and keep this downloaded modelica file inside it.
+
+![Magic_demo_9](/img/magic_demo_9.png)
+
 * Run the model in OpenModelica environment and you will get the corresponding simulation results.
 
 Contributors

@@ -2617,6 +2617,31 @@ designerControllers
 				            // set to app context
 				            
 				        };
+
+				        /**************************************************************/
+					//Control Generated Model
+					/**************************************************************/
+						$scope.controlModel= function() {
+							// console.log("in");
+			    //           let first = 10;
+						 //  let second = 20;
+						 //  fetch('http://127.0.0.1:81/add?a=' + first + '&b=' + second)
+						 //    .then((response) => {
+						 //      return response.json();
+						 //    })
+						 //    .then((myJson) => {
+						 //        $scope.selectedComponentName="When I add " + first + " and " + second + " I get: " + myJson.result;
+							// 	$("#alertBox").removeClass("panel-red");
+							// 	$("#alertBox").addClass("panel-green");
+						 //    }).catch((error) => {
+						 //    	$scope.selectedComponentName="Python call error";
+							// 	$("#alertBox").removeClass("panel-green");
+							// 	$("#alertBox").addClass("panel-red");
+						 //    });     
+							window.open("http://localhost:7777/controlModel");
+						 	//var run= xmlDoc('WSCRIPT.Shell').Run("dir");
+						 	//var oShell = new ActiveXObject("wscript.shell");
+						 }
 				        
 				        
 				        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

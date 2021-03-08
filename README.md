@@ -104,13 +104,21 @@ python3.5 -V
 Using the Software Tool `MAGIC`
 -------------------------------------
 
-## Setting up a local HTTP Server with Python
+## Setting up local HTTP Servers with Python
 
+#### Tool Server Setup
 Run the following Commands:
 ```
 git clone https://github.com/arnab-m/imprint-mgp.git .
 cd imprint-mgp/MAGIC
 python3 -m http.server 8000
+```
+
+#### Control Server Setup
+Run the following Commands:
+```
+cd imprint-mgp/MAGIC/Scheduler
+python3 controlModel.py
 ```
 
 ## Running MAGIC
@@ -178,11 +186,15 @@ python3 -m http.server 8000
 ![Magic_demo_8](/img/magic_demo_8.png)
 
 * Once you finalize the design, download the modelica file for the model by clicking the `Download MO` button.
-* Look for the path `MicroGrid/Examples/OnePhase` in the custom MicroGrid modelica library and keep this downloaded modelica file inside it.
+<!-- * Look for the path `MicroGrid/Examples/OnePhase` in the custom MicroGrid modelica library and keep this downloaded modelica file inside it.-->
 
 ![Magic_demo_9](/img/magic_demo_9.png)
 
-* Run the model in OpenModelica environment and you will get the corresponding simulation results.
+* Press the `Control` button => A new webpage will open and the controller starts working on the generated model.
+
+![Magic_demo_10](/img/magic_demo_10.png)
+
+* Simulation runs at the backend and currently once it is done, the corresponding simulation results can be seen on the control server command terminal and in the `Scheduler` folder.
 
 Contributors
 -------------------
